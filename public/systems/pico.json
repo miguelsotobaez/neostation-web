@@ -1,0 +1,93 @@
+{
+  "system": {
+    "id": "pico",
+    "name": "Sega Pico",
+    "short_name": "Pico",
+    "details": {
+      "manufacturer": "Sega",
+      "release_date": "1993-10-01",
+      "description": "Sega's educational console for children with a pen-based tablet.",
+      "type": "console"
+    },
+    "ids": {
+      "screenscraper": 250,
+      "retroachievements": null
+    },
+    "folders": [
+      "pico",
+      "Sega Pico"
+    ],
+    "colors": [
+      "#FFEB3B",
+      "#42A5F5"
+    ],
+    "extensions": [
+      "md",
+      "7z",
+      "zip"
+    ]
+  },
+  "emulators": [
+    {
+      "name": "RetroArch64 Picodrive",
+      "unique_id": "pico.ra64.picodrive",
+      "description": "Supported extensions: md, 7z, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO picodrive  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.aarch64/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 Picodrive",
+      "unique_id": "pico.ra32.picodrive",
+      "description": "Supported extensions: md, 7z, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO picodrive  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.ra32/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch Picodrive",
+      "default": true,
+      "unique_id": "pico.ra.picodrive",
+      "description": "Supported extensions: md, 7z, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO picodrive  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg"
+        },
+        "windows": {
+          "executable": "retroarch.exe",
+          "args": "-L picodrive_libretro.dll \"{file.path}\""
+        },
+        "linux": {
+          "executable": "retroarch",
+          "args": "-L picodrive_libretro.so \"{file.path}\""
+        },
+        "macos": {
+          "executable": "retroarch",
+          "args": "-L picodrive_libretro.dylib \"{file.path}\""
+        }
+      }
+    }
+  ],
+  "neosync": {
+    "sync": true,
+    "android_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "windows_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "linux_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "macos_sync_folder": [
+      "{SYNC_DIR}"
+    ]
+  }
+}

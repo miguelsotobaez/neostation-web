@@ -1,0 +1,72 @@
+{
+  "system": {
+    "id": "rpgmaker",
+    "name": "RPG Maker",
+    "short_name": "RPGM",
+    "details": {
+      "manufacturer": "",
+      "release_date": "1992-01-01",
+      "description": "Game creation tool and engine for building 2D role-playing games.",
+      "type": "virtual"
+    },
+    "ids": {
+      "screenscraper": 231,
+      "retroachievements": null
+    },
+    "folders": [
+      "rpgmaker",
+      "RPG Maker"
+    ],
+    "colors": [
+      "#424242",
+      "#FF9800"
+    ],
+    "extensions": [
+      "easyrpg",
+      "ldb",
+      "zip"
+    ]
+  },
+  "emulators": [
+    {
+      "name": "RetroArch64 easyRPG",
+      "unique_id": "rpgmaker.ra64.easyrpg",
+      "description": "Supported extensions: easyrpg, ldb, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO easyrpg  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.aarch64/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 easyRPG",
+      "unique_id": "rpgmaker.ra32.easyrpg",
+      "description": "Supported extensions: easyrpg, ldb, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO easyrpg  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.ra32/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch easyRPG",
+      "unique_id": "rpgmaker.ra.easyrpg",
+      "description": "Supported extensions: easyrpg, ldb, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO easyrpg  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg"
+        }
+      }
+    }
+  ],
+  "neosync": {
+    "sync": false,
+    "android_sync_folder": [],
+    "windows_sync_folder": [],
+    "linux_sync_folder": [],
+    "macos_sync_folder": []
+  }
+}

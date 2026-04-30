@@ -1,0 +1,72 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import SkipLink from "@/components/SkipLink.astro";
+import Footer from "@/components/layout/Footer.astro";
+import Header from "@/components/layout/Header.astro";
+import { siteConfig } from "@/site.config";
+import type { SiteMeta } from "@/types";
+
+interface Props {
+  meta: SiteMeta;
+}
+
+const {
+  meta: { articleDate, description = siteConfig.description, ogImage, title },
+} = Astro.props;
+---
+
+<html class="scroll-smooth" lang={siteConfig.lang} data-theme="dark">
+  <head>
+    {/* Critical inline styles — applied as the VERY FIRST thing in the head to prevent ANY white flash in production */}
+    <style is:inline>
+      :root {
+        color-scheme: dark;
+        background-color: #1d2024;
+      }
+      html, body {
+        background-color: #1d2024 !important;
+      }
+      ::view-transition-group(root),
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        background-color: #1d2024 !important;
+      }
+    </style>
+    <BaseHead
+      articleDate={articleDate}
+      description={description}
+      ogImage={ogImage}
+      title={title}
+    />
+  </head>
+  <body
+    class="bg-[#1d2024] text-gray-200 mx-auto flex min-h-screen max-w-7xl flex-col px-4 pt-4 sm:pt-8 font-sans text-sm font-normal antialiased sm:px-8"
+  >
+    <SkipLink />
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <script is:inline type="speculationrules">
+      {
+        "prefetch": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "immediate"
+          }
+        ],
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+  </body>
+</html>

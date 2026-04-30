@@ -1,0 +1,156 @@
+{
+  "system": {
+    "id": "amiga",
+    "name": "Commodore Amiga",
+    "short_name": "Amiga",
+    "details": {
+      "manufacturer": "Commodore",
+      "release_date": "1985-07-23",
+      "description": "Commodore's 16/32-bit multimedia home computer with advanced graphics and sound.",
+      "type": "computer"
+    },
+    "ids": {
+      "screenscraper": 64,
+      "retroachievements": null
+    },
+    "folders": [
+      "amiga",
+      "Commodore Amiga"
+    ],
+    "colors": [
+      "#E57373",
+      "#64B5F6"
+    ],
+    "extensions": [
+      "7z",
+      "adf",
+      "adz",
+      "ccd",
+      "chd",
+      "cue",
+      "dms",
+      "fdi",
+      "hdf",
+      "hdz",
+      "info",
+      "ipf",
+      "iso",
+      "lha",
+      "m3u",
+      "mds",
+      "nrg",
+      "rp9",
+      "slave",
+      "uae",
+      "zip"
+    ]
+  },
+  "emulators": [
+    {
+      "name": "RetroArch64 puae",
+      "unique_id": "amiga.ra64.puae",
+      "description": "Supported extensions: 7z, adf, adz, ccd, chd, cue, dms, fdi, hdf, hdz, info, ipf, iso, lha, m3u, mds, nrg, rp9, slave, uae, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO puae  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.aarch64/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch64 puae2021",
+      "unique_id": "amiga.ra64.puae2021",
+      "description": "Supported extensions: 7z, adf, adz, ccd, chd, cue, dms, fdi, hdf, hdz, info, ipf, iso, lha, m3u, mds, nrg, rp9, slave, uae, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO puae2021  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.aarch64/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 puae",
+      "unique_id": "amiga.ra32.puae",
+      "description": "Supported extensions: 7z, adf, adz, ccd, chd, cue, dms, fdi, hdf, hdz, info, ipf, iso, lha, m3u, mds, nrg, rp9, slave, uae, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO puae  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.ra32/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 puae2021",
+      "unique_id": "amiga.ra32.puae2021",
+      "description": "Supported extensions: 7z, adf, adz, ccd, chd, cue, dms, fdi, hdf, hdz, info, ipf, iso, lha, m3u, mds, nrg, rp9, slave, uae, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO puae2021  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.ra32/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch puae",
+      "default": true,
+      "unique_id": "amiga.ra.puae",
+      "description": "Supported extensions: 7z, adf, adz, ccd, chd, cue, dms, fdi, hdf, hdz, info, ipf, iso, lha, m3u, mds, nrg, rp9, slave, uae, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO puae  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg"
+        },
+        "windows": {
+          "executable": "retroarch.exe",
+          "args": "-L puae_libretro.dll \"{file.path}\""
+        },
+        "linux": {
+          "executable": "retroarch",
+          "args": "-L puae_libretro.so \"{file.path}\""
+        },
+        "macos": {
+          "executable": "RetroArch.App",
+          "args": "-L puae_libretro.dylib \"{file.path}\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch puae2021",
+      "unique_id": "amiga.ra.puae2021",
+      "description": "Supported extensions: 7z, adf, adz, ccd, chd, cue, dms, fdi, hdf, hdz, info, ipf, iso, lha, m3u, mds, nrg, rp9, slave, uae, zip.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO puae2021  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg"
+        },
+        "windows": {
+          "executable": "retroarch.exe",
+          "args": "-L puae2021_libretro.dll \"{file.path}\""
+        },
+        "linux": {
+          "executable": "retroarch",
+          "args": "-L puae2021_libretro.so \"{file.path}\""
+        },
+        "macos": {
+          "executable": "RetroArch.App",
+          "args": "-L puae2021_libretro.dylib \"{file.path}\""
+        }
+      }
+    }
+  ],
+  "neosync": {
+    "sync": true,
+    "android_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "windows_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "linux_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "macos_sync_folder": [
+      "{SYNC_DIR}"
+    ]
+  }
+}

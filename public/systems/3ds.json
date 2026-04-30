@@ -1,0 +1,205 @@
+{
+  "system": {
+    "id": "3ds",
+    "name": "Nintendo 3DS",
+    "short_name": "3DS",
+    "details": {
+      "manufacturer": "Nintendo",
+      "release_date": "2011-02-26",
+      "description": "Nintendo's glasses-free 3D handheld with dual screens and touch controls.",
+      "type": "handheld"
+    },
+    "ids": {
+      "screenscraper": 17,
+      "retroachievements": null
+    },
+    "folders": [
+      "3ds",
+      "n3ds",
+      "Nintendo 3DS"
+    ],
+    "colors": [
+      "#4DD0E1",
+      "#EF5350"
+    ],
+    "extensions": [
+      "3ds",
+      "3dsx",
+      "app",
+      "axf",
+      "cci",
+      "cxi",
+      "elf",
+      "zcci",
+      "zcxi"
+    ]
+  },
+  "emulators": [
+    {
+      "name": "RetroArch Citra",
+      "default": true,
+      "unique_id": "3ds.ra.citra",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra\""
+        },
+        "windows": {
+          "executable": "retroarch.exe",
+          "args": "-L citra_libretro.dll \"{file.path}\""
+        },
+        "linux": {
+          "executable": "retroarch",
+          "args": "-L citra_libretro.so \"{file.path}\""
+        },
+        "macos": {
+          "executable": "RetroArch.App",
+          "args": "-L citra_libretro.dylib \"{file.path}\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch Citra2018",
+      "unique_id": "3ds.ra.citra2018",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra2018\""
+        },
+        "windows": {
+          "executable": "retroarch.exe",
+          "args": "-L citra2018_libretro.dll \"{file.path}\""
+        },
+        "linux": {
+          "executable": "retroarch",
+          "args": "-L citra2018_libretro.so \"{file.path}\""
+        },
+        "macos": {
+          "executable": "RetroArch.App",
+          "args": "-L citra2018_libretro.dylib \"{file.path}\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch Citra Canary",
+      "unique_id": "3ds.ra.citra_canary",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra_canary\""
+        },
+        "windows": {
+          "executable": "retroarch.exe",
+          "args": "-L citra_canary_libretro.dll \"{file.path}\""
+        },
+        "linux": {
+          "executable": "retroarch",
+          "args": "-L citra_canary_libretro.so \"{file.path}\""
+        },
+        "macos": {
+          "executable": "RetroArch.App",
+          "args": "-L citra_canary_libretro.dylib \"{file.path}\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch64 Citra",
+      "unique_id": "3ds.ra64.citra",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch64 Citra2018",
+      "unique_id": "3ds.ra64.citra2018",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra2018\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch64 Citra Canary",
+      "unique_id": "3ds.ra64.citra_canary",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra_canary\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 Citra",
+      "unique_id": "3ds.ra32.citra",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 Citra2018",
+      "unique_id": "3ds.ra32.citra2018",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra2018\""
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 Citra Canary",
+      "unique_id": "3ds.ra32.citra_canary",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture --es ROM \"{file.path}\" --es LIBRETRO \"citra_canary\""
+        }
+      }
+    },
+    {
+      "name": "Standalone Azahar",
+      "unique_id": "3ds.azahar",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: cci, cxi, zcci, zcxi.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n io.github.lime3ds.android/org.citra.citra_emu.activities.EmulationActivity\n  -a android.intent.action.VIEW\n  -d {file.uri}\n  --activity-clear-task\n  --activity-clear-top\n"
+        },
+        "windows": {
+          "executable": "azahar.exe",
+          "args": "\"{file.path}\""
+        },
+        "linux": {
+          "executable": "azahar.AppImage",
+          "args": "\"{file.path}\""
+        },
+        "macos": {
+          "executable": "Azahar.app",
+          "args": "\"{file.path}\""
+        }
+      }
+    }
+  ],
+  "neosync": {
+    "sync": false,
+    "android_sync_folder": [],
+    "windows_sync_folder": [],
+    "linux_sync_folder": [],
+    "macos_sync_folder": []
+  }
+}

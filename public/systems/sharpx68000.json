@@ -1,0 +1,103 @@
+{
+  "system": {
+    "id": "sharpx68000",
+    "name": "Sharp X68000",
+    "short_name": "X68K",
+    "details": {
+      "manufacturer": "Sharp",
+      "release_date": "1987-04-01",
+      "description": "Sharp's high-end 16-bit Japanese computer with arcade-quality graphics.",
+      "type": "computer"
+    },
+    "ids": {
+      "screenscraper": 79,
+      "retroachievements": null
+    },
+    "folders": [
+      "sharpx68000",
+      "Sharp X68000"
+    ],
+    "colors": [
+      "#212121",
+      "#757575"
+    ],
+    "extensions": [
+      "2hd",
+      "88d",
+      "cmd",
+      "d88",
+      "dim",
+      "dup",
+      "hdf",
+      "hdm",
+      "img",
+      "m3u",
+      "xdf",
+      "zip",
+      "7z"
+    ]
+  },
+  "emulators": [
+    {
+      "name": "RetroArch64 PX68k",
+      "unique_id": "sharpx68000.x68000.ra64.px68k",
+      "description": "Supported extensions: 2hd, 88d, cmd, d88, dim, dup, hdf, hdm, img, m3u, xdf, zip, 7z.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO px68k  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.aarch64/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 PX68k",
+      "unique_id": "sharpx68000.x68000.ra32.px68k",
+      "description": "Supported extensions: 2hd, 88d, cmd, d88, dim, dup, hdf, hdm, img, m3u, xdf, zip, 7z.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO px68k  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.ra32/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch PX68k",
+      "default": true,
+      "unique_id": "sharpx68000.x68000.ra.px68k",
+      "description": "Supported extensions: 2hd, 88d, cmd, d88, dim, dup, hdf, hdm, img, m3u, xdf, zip, 7z.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO px68k  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg"
+        },
+        "windows": {
+          "executable": "retroarch.exe",
+          "args": "-L px68k_libretro.dll \"{file.path}\""
+        },
+        "linux": {
+          "executable": "retroarch",
+          "args": "-L px68k_libretro.so \"{file.path}\""
+        },
+        "macos": {
+          "executable": "retroarch",
+          "args": "-L px68k_libretro.dylib \"{file.path}\""
+        }
+      }
+    }
+  ],
+  "neosync": {
+    "sync": true,
+    "android_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "windows_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "linux_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "macos_sync_folder": [
+      "{SYNC_DIR}"
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "system": {
+    "id": "pico8",
+    "name": "PICO-8",
+    "short_name": "PICO-8",
+    "details": {
+      "manufacturer": "Lexaloffle",
+      "release_date": "2014-02-01",
+      "description": "Fantasy console for creating and playing tiny retro games and demos.",
+      "type": "computer"
+    },
+    "ids": {
+      "screenscraper": 234,
+      "retroachievements": null
+    },
+    "folders": [
+      "pico8",
+      "PICO-8"
+    ],
+    "colors": [
+      "#1D2B53",
+      "#FF004D"
+    ],
+    "extensions": [
+      "p8",
+      "png"
+    ]
+  },
+  "emulators": [
+    {
+      "name": "PICO-8 Android",
+      "unique_id": "pico8.io.wip.pico8",
+      "description": "Supported extensions: p8, png.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n io.wip.pico8/com.godot.game.GodotApp  -d {file.uri}"
+        }
+      }
+    },
+    {
+      "name": "Infinity P8 Player",
+      "unique_id": "pico8.me.dt2dev.infinity",
+      "description": "Supported extensions: p8, png.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n me.dt2dev.infinity/me.dt2dev.infinity.SchemeActivity  -a android.intent.action.VIEW  -d {file.uri}"
+        }
+      }
+    },
+    {
+      "name": "RetroArch64 Fake08",
+      "unique_id": "pico8.ra64.fake08",
+      "description": "Supported extensions: p8, png.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO fake08  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.aarch64/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch64 Retro8",
+      "unique_id": "pico8.ra64.retro8",
+      "description": "Supported extensions: p8, png.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.aarch64/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO retro8  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.aarch64/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 Fake08",
+      "unique_id": "pico8.ra32.fake08",
+      "description": "Supported extensions: p8, png.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO fake08  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.ra32/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch32 Retro8",
+      "unique_id": "pico8.ra32.retro8",
+      "description": "Supported extensions: p8, png.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch.ra32/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO retro8  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch.ra32/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch Fake08",
+      "unique_id": "pico8.ra.fake08",
+      "description": "Supported extensions: p8, png.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO fake08  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg"
+        }
+      }
+    },
+    {
+      "name": "RetroArch Retro8",
+      "unique_id": "pico8.ra.retro8",
+      "description": "Supported extensions: p8, png.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture  -e ROM {file.path}  -e LIBRETRO retro8  -e CONFIGFILE /storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg"
+        }
+      }
+    }
+  ],
+  "neosync": {
+    "sync": true,
+    "android_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "windows_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "linux_sync_folder": [
+      "{SYNC_DIR}"
+    ],
+    "macos_sync_folder": [
+      "{SYNC_DIR}"
+    ]
+  }
+}

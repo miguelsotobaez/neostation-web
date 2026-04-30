@@ -1,0 +1,1112 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import { Icon } from "astro-icon/components";
+import type { SiteMeta } from "@/types";
+
+const meta: SiteMeta = {
+  description:
+    "Download NeoStation for Windows, Android, Linux, and macOS. Experience the ultimate retro gaming frontend with exceptional UI/UX and seamless performance.",
+  ogImage: "/ogImageBig.png",
+  title: "Get NeoStation - The Future of Retro Gaming",
+  twitterCard: "summary",
+  twitterImage: "/ogImageSmall.png",
+};
+
+const platforms = [
+  {
+    name: "Windows",
+    version: "Beta 0.7.1+86",
+    icon: "simple-icons:windows",
+    color: "text-blue-400",
+    bgColor: "bg-blue-400/10",
+    borderColor: "hover:border-blue-400/50",
+    shadowColor: "hover:shadow-blue-400/10",
+    requirements: "Windows 10 / 11 (64-bit)",
+    link: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-windows-x64-0.7.1+86.zip",
+    label: "Download for Windows",
+  },
+  {
+    name: "Android",
+    version: "Beta 0.7.1+86",
+    icon: "simple-icons:android",
+    color: "text-green-400",
+    bgColor: "bg-green-400/10",
+    borderColor: "hover:border-green-400/50",
+    shadowColor: "hover:shadow-green-400/10",
+    requirements: "7.0+ (API 24+)",
+    isAndroid: true,
+    note: "Requires 'All Files Access' permission on Android 11+ to manage games and saves.",
+    links: [
+      {
+        label: "Download APK",
+        url: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-android-arm64-v8a-0.7.1+86.apk",
+        primary: true,
+        recommended: false,
+      },
+      {
+        label: "Get it on Obtainium",
+        url: "https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.neogamelab.neostation%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FNeoGameLab%2Fneostation-release%22%2C%22author%22%3A%22NeoGameLab%22%2C%22name%22%3A%22NeoStation%22%2C%22preferredApkIndex%22%3A0%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3Afalse%2C%5C%22fallbackToOlderReleases%5C%22%3Atrue%2C%5C%22filterReleaseTitlesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22filterReleaseNotesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22verifyLatestTag%5C%22%3Afalse%2C%5C%22sortMethodChoice%5C%22%3A%5C%22date%5C%22%2C%5C%22useLatestAssetDateAsReleaseDate%5C%22%3Afalse%2C%5C%22releaseTitleAsVersion%5C%22%3Afalse%2C%5C%22trackOnly%5C%22%3Afalse%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%5C%22%2C%5C%22versionDetection%5C%22%3Atrue%2C%5C%22releaseDateAsVersion%5C%22%3Afalse%2C%5C%22useVersionCodeAsOSVersion%5C%22%3Afalse%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22invertAPKFilter%5C%22%3Atrue%2C%5C%22autoApkFilterByArch%5C%22%3Atrue%2C%5C%22appName%5C%22%3A%5C%22%5C%22%2C%5C%22appAuthor%5C%22%3A%5C%22%5C%22%2C%5C%22shizukuPretendToBeGooglePlay%5C%22%3Afalse%2C%5C%22allowInsecure%5C%22%3Afalse%2C%5C%22exemptFromBackgroundUpdates%5C%22%3Afalse%2C%5C%22skipUpdateNotifications%5C%22%3Afalse%2C%5C%22about%5C%22%3A%5C%22%5C%22%2C%5C%22refreshBeforeDownload%5C%22%3Afalse%2C%5C%22includeZips%5C%22%3Afalse%2C%5C%22zippedApkFilterRegEx%5C%22%3A%5C%22%5C%22%7D%22%2C%22overrideSource%22%3Anull%7D",
+        primary: false,
+        recommended: false,
+      },
+    ],
+  },
+  {
+    name: "Linux",
+    version: "Beta 0.7.1+86",
+    icon: "simple-icons:linux",
+    color: "text-orange-400",
+    bgColor: "bg-orange-400/10",
+    borderColor: "hover:border-orange-400/50",
+    shadowColor: "hover:shadow-orange-400/10",
+    requirements: "AppImage (x86_64 / ARM64)",
+    isLinux: true,
+    links: [
+      {
+        label: "Download for Linux (x64)",
+        url: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-linux-x86_64-0.7.1+86.AppImage",
+        primary: true,
+        recommended: false,
+      },
+      {
+        label: "Download for Linux (ARM64)",
+        url: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-linux-arm64-0.7.1+86.AppImage",
+        primary: false,
+        recommended: false,
+      },
+    ],
+  },
+  {
+    name: "macOS",
+    version: "Beta 0.7.1+86",
+    icon: "simple-icons:apple",
+    color: "text-indigo-400",
+    bgColor: "bg-indigo-400/10",
+    borderColor: "hover:border-indigo-400/50",
+    shadowColor: "hover:shadow-indigo-400/10",
+    requirements: "Universal (Intel & Apple Silicon)",
+    link: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-macos-universal-0.7.1+86.dmg",
+    label: "Download for macOS",
+    note: "If blocked by system, go to System Settings > Privacy & Security and click 'Open Anyway'.",
+  },
+];
+---
+
+<PageLayout meta={meta}>
+  <div class="relative py-12 md:py-20 overflow-hidden">
+    <!-- Background Accents -->
+    <div
+      class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-[#2fa593]/5 blur-[120px] rounded-full pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-500/5 blur-[100px] rounded-full pointer-events-none"
+    >
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Hero -->
+      <div class="text-center mb-16">
+        <h1
+          class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight"
+        >
+          Get <span class="text-[#2fa593]">NeoStation</span>
+        </h1>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
+            Experience the future of retro gaming on your favorite device.
+            Select your platform below to download the latest stable beta.
+          </p>
+
+          <div
+            class="inline-flex items-center gap-4 px-6 py-3 bg-[#26292e] rounded-2xl border border-white/5 shadow-xl"
+          >
+            <div
+              class="w-10 h-10 rounded-xl bg-[#2fa593]/10 flex items-center justify-center"
+            >
+              <Icon name="mdi:rocket-launch" class="w-6 h-6 text-[#2fa593]" />
+            </div>
+            <div class="text-left">
+              <div
+                class="text-xs font-bold text-gray-500 uppercase tracking-widest"
+              >
+                Latest Stable
+              </div>
+              <div class="text-lg font-bold text-white">
+                Beta 0.7.1+86
+                <span class="text-gray-600 text-sm font-normal ml-2"
+                  >, April 28, 2026</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platform Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+        {
+          platforms.map((p) => (
+            <div
+              class={`group relative p-8 rounded-3xl bg-[#26292e] border border-white/5 ${p.borderColor} transition-all duration-300 ${p.shadowColor} hover:-translate-y-1 flex flex-col`}
+            >
+              <div
+                class={`w-14 h-14 rounded-2xl ${p.bgColor} flex items-center justify-center mb-6`}
+              >
+                <Icon name={p.icon} class={`w-8 h-8 ${p.color}`} />
+              </div>
+
+              <h3 class="text-2xl font-bold text-white mb-1">{p.name}</h3>
+              <p class="text-xs text-gray-500 mb-6 font-medium uppercase tracking-wider">
+                {p.requirements}
+              </p>
+
+              <div class="space-y-3 mt-auto">
+                {p.isAndroid || p.isLinux ? (
+                  p.links.map((l) => (
+                    <a
+                      href={l.url}
+                      target="_blank"
+                      class={`w-full px-4 py-3 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-all relative overflow-hidden ${l.primary ? "bg-[#2fa593] text-white hover:bg-[#268d7e]" : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white border border-white/5"}`}
+                    >
+                      {l.recommended && (
+                        <div class="absolute top-0 right-0 bg-amber-500 text-[8px] px-2 py-0.5 rounded-bl-lg font-bold uppercase tracking-tighter text-black">
+                          Best
+                        </div>
+                      )}
+                      {l.label}
+                    </a>
+                  ))
+                ) : (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    class="w-full px-4 py-3 bg-[#2fa593] hover:bg-[#268d7e] text-white text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#2fa593]/10"
+                  >
+                    {p.label}
+                  </a>
+                )}
+              </div>
+
+              {p.note && (
+                <div class="mt-4 text-[10px] text-gray-500 leading-tight italic">
+                  *{p.note}
+                </div>
+              )}
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Beta Section & Discord -->
+      <div class="grid md:grid-cols-2 gap-8 mb-24">
+        <div
+          class="bg-gradient-to-br from-amber-500/10 to-orange-600/10 rounded-3xl border border-amber-500/20 p-8"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center shrink-0"
+            >
+              <Icon name="mdi:alert-decagram" class="w-6 h-6 text-amber-500" />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Beta Software Notice
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                These are <strong>Beta releases</strong> intended for testing and
+                feedback. While stable, you may encounter minor bugs. Join the community
+                to report issues and help improve the experience.
+              </p>
+              <div
+                class="flex items-center gap-2 text-xs font-bold text-gray-500"
+              >
+                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"
+                ></span>
+                ACTIVE DEVELOPMENT
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gradient-to-br from-[#2fa593]/10 to-blue-600/10 rounded-3xl border border-[#2fa593]/20 p-8"
+        >
+          <div class="flex items-start gap-6">
+            <div
+              class="w-12 h-12 rounded-2xl bg-[#5865F2]/10 flex items-center justify-center shrink-0"
+            >
+              <Icon
+                name="simple-icons:discord"
+                class="w-6 h-6 text-[#5865F2]"
+              />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Join the Discussion
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                Get help, share themes, report bugs, and stay updated on the latest releases.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="https://discord.gg/xE2kgKsRVq"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 px-6 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold rounded-xl transition-all shadow-lg shadow-[#5865F2]/20"
+                >
+                  <Icon name="simple-icons:discord" class="w-4 h-4" />
+                  Discord
+                </a>
+                <a
+                  href="https://github.com/miguelsotobaez/neostation-frontend/discussions"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl transition-all border border-white/10"
+                >
+                  <Icon name="simple-icons:github" class="w-4 h-4" />
+                  GitHub Discussions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Changelog -->
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-4 mb-12">
+          <h2
+            class="text-3xl font-bold text-white pl-6 border-l-4 border-[#2fa593]"
+          >
+            Changelog
+          </h2>
+          <div class="flex-grow h-[1px] bg-white/5"></div>
+        </div>
+
+        <div class="space-y-12">
+          <!-- Latest Version 0.8.0 -->
+          <div class="relative pl-8 border-l-2 border-[#2fa593]/30">
+            <div
+              class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2fa593] shadow-[0_0_15px_rgba(47,165,147,0.5)]"
+            >
+            </div>
+
+            <div class="mb-6 flex flex-wrap items-center gap-4">
+              <h3 class="text-2xl font-bold text-white">Beta 0.7.1+86</h3>
+              <span
+                class="px-3 py-1 bg-[#2fa593]/20 text-[#2fa593] text-[10px] font-bold uppercase rounded-lg tracking-widest"
+                >Latest</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-500/20 text-purple-400 text-[10px] font-bold uppercase rounded-lg tracking-widest flex items-center gap-1"
+              >
+                <Icon name="simple-icons:github" class="w-3 h-3" />
+                Open Source
+              </span>
+              <span class="text-gray-500 text-sm italic">April 30, 2026</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
+              <!-- Open Source Banner -->
+              <div class="mb-8 p-4 bg-purple-500/5 rounded-2xl border border-purple-500/20 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0">
+                  <Icon name="simple-icons:github" class="w-5 h-5 text-purple-400" />
+                </div>
+                <div>
+                  <h5 class="font-bold text-purple-400 text-sm mb-1 uppercase tracking-wide">
+                    NeoStation is now Open Source
+                  </h5>
+                  <p class="text-xs text-gray-400 leading-relaxed">
+                    Starting with Beta 0.8.0, the NeoStation app is fully open source under the <strong>GPL v3</strong> license.
+                    The source code is available at <a href="https://github.com/miguelsotobaez/neostation-frontend" target="_blank" class="text-purple-400 hover:text-purple-300 underline">github.com/miguelsotobaez/neostation-frontend</a>.
+                    Contributions, forks, and community builds are welcome!
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-8">
+                <!-- Bug Fixes -->
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0">
+                    <Icon name="mdi:bug-check" class="w-5 h-5 text-orange-400" />
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">Bug Fixes</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                      <li class="flex items-start gap-2">
+                        <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                        <span>Fixed the "Hide System" option not persisting correctly across sessions, causing hidden systems to reappear after restarting the app.</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                        <span>Fixed D-Pad "sticking" issue on Android TV/Google TV devices where a single press would sometimes move the cursor indefinitely.</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                        <span>Fixed D-Pad navigation becoming unresponsive in Scraper and Settings menus on certain hardware configurations.</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                        <span>Resolved an issue where controller input was passed through the update prompt to the background UI, making it impossible to select the update button.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Improvements -->
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                    <Icon name="mdi:cog" class="w-5 h-5 text-blue-400" />
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">Architecture</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                        <span><strong>Sync Provider System:</strong> Refactored cloud sync into an extensible provider architecture. The Sync initial view has been updated to support multiple providers, including <strong>RomM.app</strong> and <strong>Google Drive</strong>, alongside the default NeoSync service.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Version 0.7.0+85 -->
+          <div class="relative pl-8 border-l-2 border-white/5">
+            <div
+              class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-white/20"
+            >
+            </div>
+
+            <div class="mb-6 flex flex-wrap items-center gap-4">
+              <h3 class="text-2xl font-bold text-gray-300">Beta 0.7.0+85</h3>
+              <span class="text-gray-500 text-sm italic">April 27, 2026</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
+              <div class="grid md:grid-cols-2 gap-8">
+                <!-- New Features -->
+                <div>
+                  <div class="flex items-start gap-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-[#2fa593]/10 flex items-center justify-center shrink-0">
+                      <Icon name="mdi:rocket-launch" class="w-5 h-5 text-[#2fa593]" />
+                    </div>
+                    <div>
+                      <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">New Features</h5>
+                      <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-2">
+                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span><strong>Multi-Language Support:</strong> Added localization for English, Spanish, Portuguese, Russian, Chinese, French, German, Italian, Indonesian, and Japanese.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span><strong>Themes System:</strong> Introduced the "neostation" theme with system backgrounds and logos. Support for solid color backgrounds and independent user customization (backgrounds/GIFs).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span><strong>Per-Game Emulators:</strong> Major update allowing you to select a specific emulator for each game, overriding the system default.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span><strong>M3U Support:</strong> Added support for multi-disk systems using .m3u files. Files listed within an M3U are now automatically hidden.</span>
+                        </li>
+                         <li class="flex items-start gap-2">
+                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span><strong>Music Enhancements:</strong> Added a spinning disc animation with cover art background when music is playing.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span><strong>Reset Playtime:</strong> You can now reset the tracked playtime for any game within the Game Settings menu.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span><strong>Hide Systems:</strong> Added a new option in settings to hide specific systems from the main view.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Improvements & Fixes -->
+                <div class="space-y-8">
+                  <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0">
+                      <Icon name="mdi:bug-check" class="w-5 h-5 text-orange-400" />
+                    </div>
+                    <div>
+                      <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">Bug Fixes</h5>
+                      <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2">
+                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span>Fixed game launch dialog remaining open after closing the emulator.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span>Fixed system sorting by year not persisting after restart.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span>Fixed sound effects turning back on after returning from a game session.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span>Fixed game art visibility for filenames with multiple dots.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span>Fixed GIF aspect ratio not being respected when used as a system background.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                      <Icon name="mdi:cog" class="w-5 h-5 text-blue-400" />
+                    </div>
+                    <div>
+                      <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">Improvements</h5>
+                      <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2">
+                          <span class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span>Updated system JSON files for better folder name compatibility.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span>Improved Gamepad support for broader controller compatibility.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
+                          <span>Added more high-quality system logos (thanks to @PaulStranger).</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Version 0.6.8+80 -->
+          <div class="relative pl-8 border-l-2 border-white/5">
+            <div
+              class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-white/20"
+            >
+            </div>
+
+            <div class="mb-6 flex flex-wrap items-center gap-4">
+              <h4 class="text-xl font-bold text-gray-300">Beta 0.6.8+80 <span class="text-orange-400 text-sm font-medium ml-2 tracking-wide uppercase">[Hotfix]</span></h4>
+              <span class="text-gray-500 text-sm italic">April 20, 2026</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
+              <div class="flex items-start gap-4 mb-8">
+                <div
+                  class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0"
+                >
+                  <Icon name="mdi:bug-check" class="w-5 h-5 text-orange-400" />
+                </div>
+                <div>
+                  <h5
+                    class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                  >
+                    Bug Fixes
+                  </h5>
+                  <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Fixed input, sfx and music continuing to work after launching a game on Linux, Windows, and macOS.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0"
+                >
+                  <Icon name="mdi:sparkles" class="w-5 h-5 text-purple-400" />
+                </div>
+                <div>
+                  <h5
+                    class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                  >
+                    Performance
+                  </h5>
+                  <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-purple-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Removed heavy shaders that slowed down the system. NeoStation balances visual appeal with high performance.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Version 0.6.6 -->
+          <div class="relative pl-8 border-l-2 border-white/5">
+            <div
+              class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-white/20"
+            >
+            </div>
+
+            <div class="mb-6 flex flex-wrap items-center gap-4">
+              <h4 class="text-xl font-bold text-gray-300">Beta 0.6.6</h4>
+              <span class="text-gray-600 text-sm italic">April 18, 2026</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
+              <div class="mb-8 p-4 bg-amber-500/5 rounded-2xl border border-amber-500/10 flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0"
+                >
+                  <Icon name="mdi:alert-circle" class="w-5 h-5 text-amber-500" />
+                </div>
+                <div>
+                  <h5
+                    class="font-bold text-amber-500 text-sm mb-1 uppercase tracking-wide"
+                  >
+                    Play Store Discontinuation
+                  </h5>
+                  <p class="text-xs text-gray-400 leading-relaxed">
+                    Starting with Beta 0.6.6, NeoStation is no longer available on the Google Play Store. To provide optimal performance and full file system access (required for ROM scanning and NeoSync), we now require the <strong>"Manage External Storage"</strong> permission, which is restricted for Play Store apps.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 mb-10">
+                <div
+                  class="w-10 h-10 rounded-xl bg-[#2fa593]/10 flex items-center justify-center shrink-0"
+                >
+                  <Icon name="mdi:rocket-launch" class="w-5 h-5 text-[#2fa593]" />
+                </div>
+                <div>
+                  <h5
+                    class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                  >
+                    New Features
+                  </h5>
+                  <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>Android TV File Explorer:</strong> Built-in file explorer with RetroArch-style navigation for Android TV and Google TV. This fixes a critical error where ROM or directory selection was not possible on devices lacking a native file picker.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>Android Auto-Update:</strong> Native in-app updates are now fully operational for Android, matching the seamless experience of our desktop versions.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>NeoSync Visibility:</strong> Screen elements related to NeoSync will now be hidden if the device is not connected to a NeoSync account.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>Enhanced UI Logic:</strong> Systems incompatible with RetroAchievements or ScreenScraper will no longer display related icons or options, ensuring a cleaner interface.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>Android App Grid:</strong> The Android system view now displays installed applications in a clean grid layout for better visibility.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>Optimized Setup:</strong> Improved the initial configuration flow when skipping ROM scanning, ensuring Android apps are correctly detected and displayed immediately.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                       <span
+                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                       ></span>
+                       <span
+                         ><strong>ROM list naming:</strong> Per-system <strong>Always show ROM file name</strong>, when on, the list always uses the name derived from the file (with your hide-extension / parentheses / brackets preferences). When off, a ScreenScraper <strong>real name</strong> can appear as the main title when available; otherwise the file-based name is used. Setting is stored per system and included in database upgrades for new and existing installs.</span
+                       >
+                     </li>
+                     <li class="flex items-start gap-2">
+                       <span
+                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                       ></span>
+                       <span
+                         ><strong>System View Modes:</strong> Added a toggle in the Systems view to switch between <strong>Grid</strong> and <strong>Carousel</strong> layouts, providing more flexibility in how you browse your collection.</span
+                       >
+                     </li>
+                     <li class="flex items-start gap-2">
+                       <span
+                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                       ></span>
+                       <span
+                         ><strong>Sorting & Ordering:</strong> Implemented <strong>Sort By</strong> and <strong>Order</strong> functionality directly within the Systems view for improved library management.</span
+                       >
+                     </li>
+                     <li class="flex items-start gap-2">
+                       <span
+                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                       ></span>
+                       <span
+                         ><strong>UI Streamlining:</strong> Removed the redundant <strong>View Mode</strong> option from General Settings, as layout preferences are now managed from systems view.</span
+                       >
+                     </li>
+                     <li class="flex items-start gap-2">
+                       <span
+                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                       ></span>
+                       <span
+                         ><strong>New Color Palettes:</strong> Added two new color palettes, <strong>RGC</strong> and <strong>TW</strong>, providing more customization options for the interface.</span
+                       >
+                     </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0"
+                >
+                  <Icon name="mdi:bug-check" class="w-5 h-5 text-orange-400" />
+                </div>
+                <div>
+                  <h5
+                    class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                  >
+                    Bug Fixes
+                  </h5>
+                  <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Fixed navigation SFX playing twice when browsing with a
+                        gamepad.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Fixed empty systems appearing in the list when
+                        recursive scan is enabled.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Prevented device screen from turning off during active
+                        scraping sessions.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Fixed "New Content Only" scraping mode incorrectly
+                        processing all ROMs.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Individual game scraping now correctly uses "All
+                        Content" mode.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Improved NeoSync session persistence to prevent
+                        accidental logouts during device reboots or offline
+                        startup.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Improved emulator detection to prevent background music
+                        from playing while standalone games or launchers are
+                        active.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Version 0.5.0+65 -->
+          <div class="relative pl-8 border-l-2 border-white/5">
+            <div
+              class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-white/20"
+            >
+            </div>
+            <div class="mb-6 flex flex-wrap items-center gap-4">
+              <h4 class="text-xl font-bold text-gray-300">Beta 0.5.0+65</h4>
+              <span class="text-gray-600 text-sm italic">April 10, 2026</span>
+            </div>
+
+            <div class="space-y-4">
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#2fa593]/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon
+                      name="mdi:controller"
+                      class="w-5 h-5 text-[#2fa593]"
+                    />
+                  </div>
+                  <div>
+                    <h5
+                      class="font-bold text-white text-sm mb-1 uppercase tracking-wide"
+                    >
+                      Emulation & Systems
+                    </h5>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                      Atari Jaguar CD repaired · Folder names fixed for ROM
+                      detection · Removed incompatible emulators · BigPEmu
+                      (Win/Linux) · Stella standalone (Win/Linux/macOS) · CDI
+                      RetroArch core (Win/Linux/macOS) · Missing system logos
+                      added.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon
+                      name="mdi:volume-high"
+                      class="w-5 h-5 text-blue-400"
+                    />
+                  </div>
+                  <div>
+                    <h5
+                      class="font-bold text-white text-sm mb-1 uppercase tracking-wide"
+                    >
+                      Sound & Audio
+                    </h5>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                      New navigation sound effects for menus · Toggle SFX option
+                      in General Settings.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon
+                      name="mdi:timer-sand"
+                      class="w-5 h-5 text-purple-400"
+                    />
+                  </div>
+                  <div>
+                    <h5
+                      class="font-bold text-white text-sm mb-1 uppercase tracking-wide"
+                    >
+                      Gameplay Tracking
+                    </h5>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                      Improved short session tracking (seconds support) ·
+                      Integrated "Last Played" card with live data.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon
+                      name="mdi:gamepad-variant"
+                      class="w-5 h-5 text-amber-400"
+                    />
+                  </div>
+                  <div>
+                    <h5
+                      class="font-bold text-white text-sm mb-1 uppercase tracking-wide"
+                    >
+                      Input & Navigation
+                    </h5>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                      Added rapid list and menu navigation when holding gamepad
+                      or keyboard buttons.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon
+                      name="mdi:monitor-screenshot"
+                      class="w-5 h-5 text-pink-400"
+                    />
+                  </div>
+                  <div class="w-full">
+                    <h5
+                      class="font-bold text-white text-sm mb-3 uppercase tracking-wide"
+                    >
+                      Dual-Screen Improvements
+                    </h5>
+                    <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2">
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-400"
+                      >
+                        <span class="w-1 h-1 bg-pink-400 rounded-full"></span>
+                        <span>Faster navigation transitions</span>
+                      </div>
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-400"
+                      >
+                        <span class="w-1 h-1 bg-pink-400 rounded-full"></span>
+                        <span>Video auto-play delay reduced 5s → 2s</span>
+                      </div>
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-400"
+                      >
+                        <span class="w-1 h-1 bg-pink-400 rounded-full"></span>
+                        <span>Larger mute button on secondary screen</span>
+                      </div>
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-400"
+                      >
+                        <span class="w-1 h-1 bg-pink-400 rounded-full"></span>
+                        <span>Screenshots hidden while video plays</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon
+                      name="mdi:bug-check"
+                      class="w-5 h-5 text-orange-400"
+                    />
+                  </div>
+                  <div>
+                    <h5
+                      class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                    >
+                      Bug Fixes
+                    </h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        ></span>
+                        <span
+                          >Fixed immediate update of "Recent Last Played" game
+                          status.</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        ></span>
+                        <span
+                          >Corrected NeoSync state synchronization (now
+                          correctly routed to <strong>/states</strong> folder).</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        ></span>
+                        <span
+                          >Fixed display of system backgrounds with images
+                          containing spaces in filenames.</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Version 0.4.0+59 -->
+          <div class="relative pl-8 border-l-2 border-white/5">
+            <div
+              class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-white/20"
+            >
+            </div>
+            <div class="mb-6 flex flex-wrap items-center gap-4">
+              <h4 class="text-xl font-bold text-gray-300">Beta 0.4.0+59</h4>
+              <span class="text-gray-600 text-sm italic">March 28, 2026</span>
+            </div>
+
+            <div class="space-y-4">
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon
+                      name="mdi:monitor-screenshot"
+                      class="w-5 h-5 text-blue-400"
+                    />
+                  </div>
+                  <div>
+                    <h5
+                      class="font-bold text-white text-sm mb-1 uppercase tracking-wide"
+                    >
+                      Dual-Screen Support (Android)
+                    </h5>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                      Implemented initial support for dual-screen setups.
+                      Feedback from <strong>AYN Thor</strong> users is highly encouraged!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4 mb-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon name="mdi:music" class="w-5 h-5 text-green-400" />
+                  </div>
+                  <div>
+                    <h5
+                      class="font-bold text-white text-sm mb-1 uppercase tracking-wide"
+                    >
+                      Music Player (Alpha)
+                    </h5>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                      Built-in player for MP3, FLAC, WAV, and OGG. Background
+                      playback support added.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-6 rounded-2xl bg-[#26292e]/50 border border-white/5"
+              >
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon name="mdi:sparkles" class="w-5 h-5 text-purple-400" />
+                  </div>
+                  <div class="w-full">
+                    <h5
+                      class="font-bold text-white text-sm mb-3 uppercase tracking-wide"
+                    >
+                      Visuals & Performance
+                    </h5>
+                    <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2">
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-400"
+                      >
+                        <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                        <span>Animated Shaders by default</span>
+                      </div>
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-400"
+                      >
+                        <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                        <span>Hide system logos option</span>
+                      </div>
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-400"
+                      >
+                        <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                        <span>Multiple GIF support in Grid/Carousel</span>
+                      </div>
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-400"
+                      >
+                        <span class="w-1 h-1 bg-purple-400 rounded-full"></span>
+                        <span>System Theme synchronization</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center pt-8">
+            <a
+              href="https://github.com/NeoGameLab/neostation-release/releases"
+              target="_blank"
+              class="text-sm font-bold text-gray-500 hover:text-[#2fa593] transition-colors border-b border-white/5 pb-1"
+            >
+              View Full History on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</PageLayout>
