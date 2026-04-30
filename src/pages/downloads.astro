@@ -22,7 +22,7 @@ const platforms = [
     borderColor: "hover:border-blue-400/50",
     shadowColor: "hover:shadow-blue-400/10",
     requirements: "Windows 10 / 11 (64-bit)",
-    link: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-windows-x64-0.7.1+86.zip",
+    link: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.1+86/neostation-windows-x64-0.7.1+86.zip",
     label: "Download for Windows",
   },
   {
@@ -39,7 +39,7 @@ const platforms = [
     links: [
       {
         label: "Download APK",
-        url: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-android-arm64-v8a-0.7.1+86.apk",
+        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.1+86/neostation-android-arm64-v8a-0.7.1+86.apk",
         primary: true,
         recommended: false,
       },
@@ -64,13 +64,13 @@ const platforms = [
     links: [
       {
         label: "Download for Linux (x64)",
-        url: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-linux-x86_64-0.7.1+86.AppImage",
+        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.1+86/neostation-linux-x86_64-0.7.1+86.AppImage",
         primary: true,
         recommended: false,
       },
       {
         label: "Download for Linux (ARM64)",
-        url: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-linux-arm64-0.7.1+86.AppImage",
+        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.1+86/neostation-linux-arm64-0.7.1+86.AppImage",
         primary: false,
         recommended: false,
       },
@@ -85,7 +85,7 @@ const platforms = [
     borderColor: "hover:border-indigo-400/50",
     shadowColor: "hover:shadow-indigo-400/10",
     requirements: "Universal (Intel & Apple Silicon)",
-    link: "https://github.com/NeoGameLab/neostation-release/releases/download/v0.7.1+86/neostation-macos-universal-0.7.1+86.dmg",
+    link: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.1+86/neostation-macos-universal-0.7.1+86.dmg",
     label: "Download for macOS",
     note: "If blocked by system, go to System Settings > Privacy & Security and click 'Open Anyway'.",
   },
@@ -246,7 +246,8 @@ const platforms = [
                 Join the Discussion
               </h3>
               <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                Get help, share themes, report bugs, and stay updated on the latest releases.
+                Get help, share themes, report bugs, and stay updated on the
+                latest releases.
               </p>
               <div class="flex flex-wrap gap-3">
                 <a
@@ -306,18 +307,32 @@ const platforms = [
             </div>
             <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
               <!-- Open Source Banner -->
-              <div class="mb-8 p-4 bg-purple-500/5 rounded-2xl border border-purple-500/20 flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0">
-                  <Icon name="simple-icons:github" class="w-5 h-5 text-purple-400" />
+              <div
+                class="mb-8 p-4 bg-purple-500/5 rounded-2xl border border-purple-500/20 flex items-start gap-4"
+              >
+                <div
+                  class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0"
+                >
+                  <Icon
+                    name="simple-icons:github"
+                    class="w-5 h-5 text-purple-400"
+                  />
                 </div>
                 <div>
-                  <h5 class="font-bold text-purple-400 text-sm mb-1 uppercase tracking-wide">
+                  <h5
+                    class="font-bold text-purple-400 text-sm mb-1 uppercase tracking-wide"
+                  >
                     NeoStation is now Open Source
                   </h5>
                   <p class="text-xs text-gray-400 leading-relaxed">
-                    Starting with Beta 0.8.0, the NeoStation app is fully open source under the <strong>GPL v3</strong> license.
-                    The source code is available at <a href="https://github.com/miguelsotobaez/neostation-frontend" target="_blank" class="text-purple-400 hover:text-purple-300 underline">github.com/miguelsotobaez/neostation-frontend</a>.
-                    Contributions, forks, and community builds are welcome!
+                    Starting with Beta 0.8.0, the NeoStation app is fully open
+                    source under the <strong>GPL v3</strong> license. The source code
+                    is available at <a
+                      href="https://github.com/miguelsotobaez/neostation-frontend"
+                      target="_blank"
+                      class="text-purple-400 hover:text-purple-300 underline"
+                      >github.com/miguelsotobaez/neostation-frontend</a
+                    >. Contributions, forks, and community builds are welcome!
                   </p>
                 </div>
               </div>
@@ -325,27 +340,60 @@ const platforms = [
               <div class="grid md:grid-cols-2 gap-8">
                 <!-- Bug Fixes -->
                 <div class="flex items-start gap-4">
-                  <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0">
-                    <Icon name="mdi:bug-check" class="w-5 h-5 text-orange-400" />
+                  <div
+                    class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <Icon
+                      name="mdi:bug-check"
+                      class="w-5 h-5 text-orange-400"
+                    />
                   </div>
                   <div>
-                    <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">Bug Fixes</h5>
+                    <h5
+                      class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                    >
+                      Bug Fixes
+                    </h5>
                     <ul class="space-y-2 text-sm text-gray-400">
                       <li class="flex items-start gap-2">
-                        <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                        <span>Fixed the "Hide System" option not persisting correctly across sessions, causing hidden systems to reappear after restarting the app.</span>
+                        <span
+                          class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        ></span>
+                        <span
+                          >Fixed the "Hide System" option not persisting
+                          correctly across sessions, causing hidden systems to
+                          reappear after restarting the app.</span
+                        >
                       </li>
                       <li class="flex items-start gap-2">
-                        <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                        <span>Fixed D-Pad "sticking" issue on Android TV/Google TV devices where a single press would sometimes move the cursor indefinitely.</span>
+                        <span
+                          class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        ></span>
+                        <span
+                          >Fixed D-Pad "sticking" issue on Android TV/Google TV
+                          devices where a single press would sometimes move the
+                          cursor indefinitely.</span
+                        >
                       </li>
                       <li class="flex items-start gap-2">
-                        <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                        <span>Fixed D-Pad navigation becoming unresponsive in Scraper and Settings menus on certain hardware configurations.</span>
+                        <span
+                          class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        ></span>
+                        <span
+                          >Fixed D-Pad navigation becoming unresponsive in
+                          Scraper and Settings menus on certain hardware
+                          configurations.</span
+                        >
                       </li>
                       <li class="flex items-start gap-2">
-                        <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                        <span>Resolved an issue where controller input was passed through the update prompt to the background UI, making it impossible to select the update button.</span>
+                        <span
+                          class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        ></span>
+                        <span
+                          >Resolved an issue where controller input was passed
+                          through the update prompt to the background UI, making
+                          it impossible to select the update button.</span
+                        >
                       </li>
                     </ul>
                   </div>
@@ -353,15 +401,30 @@ const platforms = [
 
                 <!-- Improvements -->
                 <div class="flex items-start gap-4">
-                  <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0"
+                  >
                     <Icon name="mdi:cog" class="w-5 h-5 text-blue-400" />
                   </div>
                   <div>
-                    <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">Architecture</h5>
+                    <h5
+                      class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                    >
+                      Architecture
+                    </h5>
                     <ul class="space-y-2 text-sm text-gray-400">
                       <li class="flex items-start gap-2">
-                        <span class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                        <span><strong>Sync Provider System:</strong> Refactored cloud sync into an extensible provider architecture. The Sync initial view has been updated to support multiple providers, including <strong>RomM.app</strong> and <strong>Google Drive</strong>, alongside the default NeoSync service.</span>
+                        <span
+                          class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                        ></span>
+                        <span
+                          ><strong>Sync Provider System:</strong> Refactored cloud
+                          sync into an extensible provider architecture. The Sync
+                          initial view has been updated to support multiple providers,
+                          including <strong>RomM.app</strong> and <strong
+                            >Google Drive</strong
+                          >, alongside the default NeoSync service.</span
+                        >
                       </li>
                     </ul>
                   </div>
@@ -386,39 +449,89 @@ const platforms = [
                 <!-- New Features -->
                 <div>
                   <div class="flex items-start gap-4 mb-6">
-                    <div class="w-10 h-10 rounded-xl bg-[#2fa593]/10 flex items-center justify-center shrink-0">
-                      <Icon name="mdi:rocket-launch" class="w-5 h-5 text-[#2fa593]" />
+                    <div
+                      class="w-10 h-10 rounded-xl bg-[#2fa593]/10 flex items-center justify-center shrink-0"
+                    >
+                      <Icon
+                        name="mdi:rocket-launch"
+                        class="w-5 h-5 text-[#2fa593]"
+                      />
                     </div>
                     <div>
-                      <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">New Features</h5>
+                      <h5
+                        class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                      >
+                        New Features
+                      </h5>
                       <ul class="space-y-3 text-sm text-gray-400">
                         <li class="flex items-start gap-2">
-                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span><strong>Multi-Language Support:</strong> Added localization for English, Spanish, Portuguese, Russian, Chinese, French, German, Italian, Indonesian, and Japanese.</span>
+                          <span
+                            class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            ><strong>Multi-Language Support:</strong> Added localization
+                            for English, Spanish, Portuguese, Russian, Chinese, French,
+                            German, Italian, Indonesian, and Japanese.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span><strong>Themes System:</strong> Introduced the "neostation" theme with system backgrounds and logos. Support for solid color backgrounds and independent user customization (backgrounds/GIFs).</span>
+                          <span
+                            class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            ><strong>Themes System:</strong> Introduced the "neostation"
+                            theme with system backgrounds and logos. Support for solid
+                            color backgrounds and independent user customization (backgrounds/GIFs).</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span><strong>Per-Game Emulators:</strong> Major update allowing you to select a specific emulator for each game, overriding the system default.</span>
+                          <span
+                            class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            ><strong>Per-Game Emulators:</strong> Major update allowing
+                            you to select a specific emulator for each game, overriding
+                            the system default.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span><strong>M3U Support:</strong> Added support for multi-disk systems using .m3u files. Files listed within an M3U are now automatically hidden.</span>
-                        </li>
-                         <li class="flex items-start gap-2">
-                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span><strong>Music Enhancements:</strong> Added a spinning disc animation with cover art background when music is playing.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span><strong>Reset Playtime:</strong> You can now reset the tracked playtime for any game within the Game Settings menu.</span>
+                          <span
+                            class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            ><strong>M3U Support:</strong> Added support for multi-disk
+                            systems using .m3u files. Files listed within an M3U are
+                            now automatically hidden.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span><strong>Hide Systems:</strong> Added a new option in settings to hide specific systems from the main view.</span>
+                          <span
+                            class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            ><strong>Music Enhancements:</strong> Added a spinning
+                            disc animation with cover art background when music is
+                            playing.</span
+                          >
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span
+                            class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            ><strong>Reset Playtime:</strong> You can now reset the
+                            tracked playtime for any game within the Game Settings
+                            menu.</span
+                          >
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span
+                            class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            ><strong>Hide Systems:</strong> Added a new option in
+                            settings to hide specific systems from the main view.</span
+                          >
                         </li>
                       </ul>
                     </div>
@@ -428,54 +541,109 @@ const platforms = [
                 <!-- Improvements & Fixes -->
                 <div class="space-y-8">
                   <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0">
-                      <Icon name="mdi:bug-check" class="w-5 h-5 text-orange-400" />
+                    <div
+                      class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0"
+                    >
+                      <Icon
+                        name="mdi:bug-check"
+                        class="w-5 h-5 text-orange-400"
+                      />
                     </div>
                     <div>
-                      <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">Bug Fixes</h5>
+                      <h5
+                        class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                      >
+                        Bug Fixes
+                      </h5>
                       <ul class="space-y-2 text-sm text-gray-400">
                         <li class="flex items-start gap-2">
-                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span>Fixed game launch dialog remaining open after closing the emulator.</span>
+                          <span
+                            class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            >Fixed game launch dialog remaining open after
+                            closing the emulator.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span>Fixed system sorting by year not persisting after restart.</span>
+                          <span
+                            class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            >Fixed system sorting by year not persisting after
+                            restart.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span>Fixed sound effects turning back on after returning from a game session.</span>
+                          <span
+                            class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            >Fixed sound effects turning back on after returning
+                            from a game session.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span>Fixed game art visibility for filenames with multiple dots.</span>
+                          <span
+                            class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            >Fixed game art visibility for filenames with
+                            multiple dots.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span>Fixed GIF aspect ratio not being respected when used as a system background.</span>
+                          <span
+                            class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            >Fixed GIF aspect ratio not being respected when
+                            used as a system background.</span
+                          >
                         </li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                    <div
+                      class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0"
+                    >
                       <Icon name="mdi:cog" class="w-5 h-5 text-blue-400" />
                     </div>
                     <div>
-                      <h5 class="font-bold text-white text-sm mb-2 uppercase tracking-wide">Improvements</h5>
+                      <h5
+                        class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                      >
+                        Improvements
+                      </h5>
                       <ul class="space-y-2 text-sm text-gray-400">
                         <li class="flex items-start gap-2">
-                          <span class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span>Updated system JSON files for better folder name compatibility.</span>
+                          <span
+                            class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            >Updated system JSON files for better folder name
+                            compatibility.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span>Improved Gamepad support for broader controller compatibility.</span>
+                          <span
+                            class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            >Improved Gamepad support for broader controller
+                            compatibility.</span
+                          >
                         </li>
                         <li class="flex items-start gap-2">
-                          <span class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"></span>
-                          <span>Added more high-quality system logos (thanks to @PaulStranger).</span>
+                          <span
+                            class="text-blue-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                          ></span>
+                          <span
+                            >Added more high-quality system logos (thanks to
+                            @PaulStranger).</span
+                          >
                         </li>
                       </ul>
                     </div>
@@ -493,7 +661,12 @@ const platforms = [
             </div>
 
             <div class="mb-6 flex flex-wrap items-center gap-4">
-              <h4 class="text-xl font-bold text-gray-300">Beta 0.6.8+80 <span class="text-orange-400 text-sm font-medium ml-2 tracking-wide uppercase">[Hotfix]</span></h4>
+              <h4 class="text-xl font-bold text-gray-300">
+                Beta 0.6.8+80 <span
+                  class="text-orange-400 text-sm font-medium ml-2 tracking-wide uppercase"
+                  >[Hotfix]</span
+                >
+              </h4>
               <span class="text-gray-500 text-sm italic">April 20, 2026</span>
             </div>
             <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
@@ -515,7 +688,8 @@ const platforms = [
                         class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        >Fixed input, sfx and music continuing to work after launching a game on Linux, Windows, and macOS.</span
+                        >Fixed input, sfx and music continuing to work after
+                        launching a game on Linux, Windows, and macOS.</span
                       >
                     </li>
                   </ul>
@@ -540,7 +714,8 @@ const platforms = [
                         class="text-purple-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        >Removed heavy shaders that slowed down the system. NeoStation balances visual appeal with high performance.</span
+                        >Removed heavy shaders that slowed down the system.
+                        NeoStation balances visual appeal with high performance.</span
                       >
                     </li>
                   </ul>
@@ -561,11 +736,16 @@ const platforms = [
               <span class="text-gray-600 text-sm italic">April 18, 2026</span>
             </div>
             <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
-              <div class="mb-8 p-4 bg-amber-500/5 rounded-2xl border border-amber-500/10 flex items-start gap-4">
+              <div
+                class="mb-8 p-4 bg-amber-500/5 rounded-2xl border border-amber-500/10 flex items-start gap-4"
+              >
                 <div
                   class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0"
                 >
-                  <Icon name="mdi:alert-circle" class="w-5 h-5 text-amber-500" />
+                  <Icon
+                    name="mdi:alert-circle"
+                    class="w-5 h-5 text-amber-500"
+                  />
                 </div>
                 <div>
                   <h5
@@ -574,7 +754,12 @@ const platforms = [
                     Play Store Discontinuation
                   </h5>
                   <p class="text-xs text-gray-400 leading-relaxed">
-                    Starting with Beta 0.6.6, NeoStation is no longer available on the Google Play Store. To provide optimal performance and full file system access (required for ROM scanning and NeoSync), we now require the <strong>"Manage External Storage"</strong> permission, which is restricted for Play Store apps.
+                    Starting with Beta 0.6.6, NeoStation is no longer available
+                    on the Google Play Store. To provide optimal performance and
+                    full file system access (required for ROM scanning and
+                    NeoSync), we now require the <strong
+                      >"Manage External Storage"</strong
+                    > permission, which is restricted for Play Store apps.
                   </p>
                 </div>
               </div>
@@ -583,7 +768,10 @@ const platforms = [
                 <div
                   class="w-10 h-10 rounded-xl bg-[#2fa593]/10 flex items-center justify-center shrink-0"
                 >
-                  <Icon name="mdi:rocket-launch" class="w-5 h-5 text-[#2fa593]" />
+                  <Icon
+                    name="mdi:rocket-launch"
+                    class="w-5 h-5 text-[#2fa593]"
+                  />
                 </div>
                 <div>
                   <h5
@@ -597,7 +785,11 @@ const platforms = [
                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        ><strong>Android TV File Explorer:</strong> Built-in file explorer with RetroArch-style navigation for Android TV and Google TV. This fixes a critical error where ROM or directory selection was not possible on devices lacking a native file picker.</span
+                        ><strong>Android TV File Explorer:</strong> Built-in file
+                        explorer with RetroArch-style navigation for Android TV and
+                        Google TV. This fixes a critical error where ROM or directory
+                        selection was not possible on devices lacking a native file
+                        picker.</span
                       >
                     </li>
                     <li class="flex items-start gap-2">
@@ -605,7 +797,9 @@ const platforms = [
                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        ><strong>Android Auto-Update:</strong> Native in-app updates are now fully operational for Android, matching the seamless experience of our desktop versions.</span
+                        ><strong>Android Auto-Update:</strong> Native in-app updates
+                        are now fully operational for Android, matching the seamless
+                        experience of our desktop versions.</span
                       >
                     </li>
                     <li class="flex items-start gap-2">
@@ -613,7 +807,9 @@ const platforms = [
                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        ><strong>NeoSync Visibility:</strong> Screen elements related to NeoSync will now be hidden if the device is not connected to a NeoSync account.</span
+                        ><strong>NeoSync Visibility:</strong> Screen elements related
+                        to NeoSync will now be hidden if the device is not connected
+                        to a NeoSync account.</span
                       >
                     </li>
                     <li class="flex items-start gap-2">
@@ -621,7 +817,9 @@ const platforms = [
                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        ><strong>Enhanced UI Logic:</strong> Systems incompatible with RetroAchievements or ScreenScraper will no longer display related icons or options, ensuring a cleaner interface.</span
+                        ><strong>Enhanced UI Logic:</strong> Systems incompatible
+                        with RetroAchievements or ScreenScraper will no longer display
+                        related icons or options, ensuring a cleaner interface.</span
                       >
                     </li>
                     <li class="flex items-start gap-2">
@@ -629,7 +827,9 @@ const platforms = [
                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        ><strong>Android App Grid:</strong> The Android system view now displays installed applications in a clean grid layout for better visibility.</span
+                        ><strong>Android App Grid:</strong> The Android system view
+                        now displays installed applications in a clean grid layout
+                        for better visibility.</span
                       >
                     </li>
                     <li class="flex items-start gap-2">
@@ -637,49 +837,71 @@ const platforms = [
                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        ><strong>Optimized Setup:</strong> Improved the initial configuration flow when skipping ROM scanning, ensuring Android apps are correctly detected and displayed immediately.</span
+                        ><strong>Optimized Setup:</strong> Improved the initial configuration
+                        flow when skipping ROM scanning, ensuring Android apps are
+                        correctly detected and displayed immediately.</span
                       >
                     </li>
                     <li class="flex items-start gap-2">
-                       <span
-                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                       ></span>
-                       <span
-                         ><strong>ROM list naming:</strong> Per-system <strong>Always show ROM file name</strong>, when on, the list always uses the name derived from the file (with your hide-extension / parentheses / brackets preferences). When off, a ScreenScraper <strong>real name</strong> can appear as the main title when available; otherwise the file-based name is used. Setting is stored per system and included in database upgrades for new and existing installs.</span
-                       >
-                     </li>
-                     <li class="flex items-start gap-2">
-                       <span
-                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                       ></span>
-                       <span
-                         ><strong>System View Modes:</strong> Added a toggle in the Systems view to switch between <strong>Grid</strong> and <strong>Carousel</strong> layouts, providing more flexibility in how you browse your collection.</span
-                       >
-                     </li>
-                     <li class="flex items-start gap-2">
-                       <span
-                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                       ></span>
-                       <span
-                         ><strong>Sorting & Ordering:</strong> Implemented <strong>Sort By</strong> and <strong>Order</strong> functionality directly within the Systems view for improved library management.</span
-                       >
-                     </li>
-                     <li class="flex items-start gap-2">
-                       <span
-                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                       ></span>
-                       <span
-                         ><strong>UI Streamlining:</strong> Removed the redundant <strong>View Mode</strong> option from General Settings, as layout preferences are now managed from systems view.</span
-                       >
-                     </li>
-                     <li class="flex items-start gap-2">
-                       <span
-                         class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                       ></span>
-                       <span
-                         ><strong>New Color Palettes:</strong> Added two new color palettes, <strong>RGC</strong> and <strong>TW</strong>, providing more customization options for the interface.</span
-                       >
-                     </li>
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>ROM list naming:</strong> Per-system <strong
+                          >Always show ROM file name</strong
+                        >, when on, the list always uses the name derived from
+                        the file (with your hide-extension / parentheses /
+                        brackets preferences). When off, a ScreenScraper <strong
+                          >real name</strong
+                        > can appear as the main title when available; otherwise the
+                        file-based name is used. Setting is stored per system and
+                        included in database upgrades for new and existing installs.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>System View Modes:</strong> Added a toggle in the
+                        Systems view to switch between <strong>Grid</strong> and <strong
+                          >Carousel</strong
+                        > layouts, providing more flexibility in how you browse your
+                        collection.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>Sorting & Ordering:</strong> Implemented <strong
+                          >Sort By</strong
+                        > and <strong>Order</strong> functionality directly within
+                        the Systems view for improved library management.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>UI Streamlining:</strong> Removed the redundant <strong
+                          >View Mode</strong
+                        > option from General Settings, as layout preferences are
+                        now managed from systems view.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-[#2fa593] mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        ><strong>New Color Palettes:</strong> Added two new color
+                        palettes, <strong>RGC</strong> and <strong>TW</strong>,
+                        providing more customization options for the interface.</span
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -1098,7 +1320,7 @@ const platforms = [
 
           <div class="text-center pt-8">
             <a
-              href="https://github.com/NeoGameLab/neostation-release/releases"
+              href="https://github.com/miguelsotobaez/neostation-frontend/releases"
               target="_blank"
               class="text-sm font-bold text-gray-500 hover:text-[#2fa593] transition-colors border-b border-white/5 pb-1"
             >
