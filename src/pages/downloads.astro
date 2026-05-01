@@ -15,19 +15,19 @@ const meta: SiteMeta = {
 const platforms = [
   {
     name: "Windows",
-    version: "Beta 0.7.2+87",
+    version: "Beta 0.7.3+88",
     icon: "simple-icons:windows",
     color: "text-blue-400",
     bgColor: "bg-blue-400/10",
     borderColor: "hover:border-blue-400/50",
     shadowColor: "hover:shadow-blue-400/10",
     requirements: "Windows 10 / 11 (64-bit)",
-    link: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.2+87/neostation-windows-x64-0.7.2+87.zip",
+    link: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.3+88/neostation-windows-x64-0.7.3+88.zip",
     label: "Download for Windows",
   },
   {
     name: "Android",
-    version: "Beta 0.7.2+87",
+    version: "Beta 0.7.3+88",
     icon: "simple-icons:android",
     color: "text-green-400",
     bgColor: "bg-green-400/10",
@@ -39,7 +39,7 @@ const platforms = [
     links: [
       {
         label: "Download APK",
-        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.2+87/neostation-android-arm64-v8a-0.7.2+87.apk",
+        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.3+88/neostation-android-arm64-v8a-0.7.3+88.apk",
         primary: true,
         recommended: false,
       },
@@ -53,7 +53,7 @@ const platforms = [
   },
   {
     name: "Linux",
-    version: "Beta 0.7.2+87",
+    version: "Beta 0.7.3+88",
     icon: "simple-icons:linux",
     color: "text-orange-400",
     bgColor: "bg-orange-400/10",
@@ -64,13 +64,13 @@ const platforms = [
     links: [
       {
         label: "Download for Linux (x64)",
-        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.2+87/neostation-linux-x86_64-0.7.2+87.AppImage",
+        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.3+88/neostation-linux-x86_64-0.7.3+88.AppImage",
         primary: true,
         recommended: false,
       },
       {
         label: "Download for Linux (ARM64)",
-        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.2+87/neostation-linux-arm64-0.7.2+87.AppImage",
+        url: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.3+88/neostation-linux-arm64-0.7.3+88.AppImage",
         primary: false,
         recommended: false,
       },
@@ -78,14 +78,14 @@ const platforms = [
   },
   {
     name: "macOS",
-    version: "Beta 0.7.2+87",
+    version: "Beta 0.7.3+88",
     icon: "simple-icons:apple",
     color: "text-indigo-400",
     bgColor: "bg-indigo-400/10",
     borderColor: "hover:border-indigo-400/50",
     shadowColor: "hover:shadow-indigo-400/10",
     requirements: "Universal (Intel & Apple Silicon)",
-    link: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.2+87/neostation-macos-universal-0.7.2+87.dmg",
+    link: "https://github.com/miguelsotobaez/neostation-frontend/releases/download/v0.7.3+88/neostation-macos-universal-0.7.3+88.dmg",
     label: "Download for macOS",
     note: "If blocked by system, go to System Settings > Privacy & Security and click 'Open Anyway'.",
   },
@@ -133,9 +133,9 @@ const platforms = [
                 Latest Stable
               </div>
               <div class="text-lg font-bold text-white">
-                Beta 0.7.2+87
+                Beta 0.7.3+88
                 <span class="text-gray-600 text-sm font-normal ml-2"
-                  >, April 30, 2026</span
+                  >, May 01, 2026</span
                 >
               </div>
             </div>
@@ -284,7 +284,7 @@ const platforms = [
         </div>
 
         <div class="space-y-12">
-          <!-- Latest Version 0.7.2 -->
+          <!-- Latest Version 0.7.3+88 -->
           <div class="relative pl-8 border-l-2 border-[#2fa593]/30">
             <div
               class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2fa593] shadow-[0_0_15px_rgba(47,165,147,0.5)]"
@@ -292,7 +292,7 @@ const platforms = [
             </div>
 
             <div class="mb-6 flex flex-wrap items-center gap-4">
-              <h3 class="text-2xl font-bold text-white">Beta 0.7.2+87</h3>
+              <h3 class="text-2xl font-bold text-white">Beta 0.7.3+88</h3>
               <span
                 class="px-3 py-1 bg-[#2fa593]/20 text-[#2fa593] text-[10px] font-bold uppercase rounded-lg tracking-widest"
                 >Latest</span
@@ -302,17 +302,14 @@ const platforms = [
               >
                 Hotfix
               </span>
-              <span class="text-gray-500 text-sm italic">April 30, 2026</span>
+              <span class="text-gray-500 text-sm italic">May 01, 2026</span>
             </div>
             <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
               <div class="flex items-start gap-4">
                 <div
                   class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0"
                 >
-                  <Icon
-                    name="mdi:bug-check"
-                    class="w-5 h-5 text-orange-400"
-                  />
+                  <Icon name="mdi:bug-check" class="w-5 h-5 text-orange-400" />
                 </div>
                 <div>
                   <h5
@@ -326,7 +323,54 @@ const platforms = [
                         class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       ></span>
                       <span
-                        >Fixed login issues for <strong>ScreenScraper</strong> and <strong>RetroAchievements</strong> that were preventing users from accessing their accounts.</span
+                        >Fixed an issue where the app failed to update from
+                        versions released before the open-source transition.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Version 0.7.2+87 -->
+          <div class="relative pl-8 border-l-2 border-white/5">
+            <div
+              class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-white/20"
+            >
+            </div>
+
+            <div class="mb-6 flex flex-wrap items-center gap-4">
+              <h3 class="text-2xl font-bold text-gray-300">Beta 0.7.2+87</h3>
+              <span
+                class="px-3 py-1 bg-orange-500/20 text-orange-400 text-[10px] font-bold uppercase rounded-lg tracking-widest flex items-center gap-1"
+              >
+                Hotfix
+              </span>
+              <span class="text-gray-500 text-sm italic">April 30, 2026</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-[#26292e] border border-white/5">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0"
+                >
+                  <Icon name="mdi:bug-check" class="w-5 h-5 text-orange-400" />
+                </div>
+                <div>
+                  <h5
+                    class="font-bold text-white text-sm mb-2 uppercase tracking-wide"
+                  >
+                    Bug Fixes
+                  </h5>
+                  <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="flex items-start gap-2">
+                      <span
+                        class="text-orange-400 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                      ></span>
+                      <span
+                        >Fixed login issues for <strong>ScreenScraper</strong> and
+                        <strong>RetroAchievements</strong> that were preventing users
+                        from accessing their accounts.</span
                       >
                     </li>
                   </ul>
